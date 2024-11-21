@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    color: white;
+}
+header>div>nav{
+    display:flex;
+    flex-direction: row;
+    color:white;
+}
+header>div>nav>a{
+    padding: 5px;
+    color:white;
+    text-decoration: none; /* for  take off the highlighting*/
+}
+header {
+    background-image: url(img/h5-revolution-img-1.jpg);
+}
+.navbar{
+    width:100%;
+    display:flex;
+    display: row;
+}
+q{
+    background-color:  #c59d5f;
+    color:white;
+    margin:20px;
+}
