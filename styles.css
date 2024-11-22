@@ -18,9 +18,11 @@
     background-color: black;
     width:100%;
     height: 50px;
+    padding: 15px;
     display:flex;
     display: row;
     justify-content: space-between;
+    align-items: center;
     /* for the navbar don't move*/
     position: sticky;
     top: 0;
@@ -30,7 +32,7 @@
     display:flex;
     flex-direction: row;
     color:white;
-    height: 30px;
+    height: 40%;
 }
 .navbar>nav>a{
     margin: 5px;
@@ -46,7 +48,7 @@
 .navbar>img:hover  { /* I don't arrive to make it work*/
     image-rendering: url(img/h4-logo-img-1.png);
 }
-.navbar>logo>i{
+.logos>i{
     color:white;
 }
 .navbar>nav>a, i, .navbar>img {
@@ -134,8 +136,7 @@ q{
     color: #d8bd71; /* for change the color of the text*/
 }
 .serviceicon>img:hover{
-    background: #d8bd71;
-    border-radius: 45%;
+    filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
 }
 
 .parallaxe{
