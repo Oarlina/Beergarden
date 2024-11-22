@@ -1,27 +1,152 @@
-body{
-    background-color: black;
-    color: white;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    .oswald-<uniquifier> {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+      }
+:root {
+    background-color: white;
+    font-family: Oswald;
 }
-header>div>nav{
+/*-------------------The navbar---------------------- */
+.navbar {
+    background-color: black;
+    width:100%;
+    height: 50px;
+    display:flex;
+    display: row;
+    justify-content: space-between;
+    /* for the navbar don't move*/
+    position: sticky;
+    top: 0;
+    opacity: 80%; /* for see under the navbar*/
+}
+.navbar>nav{
     display:flex;
     flex-direction: row;
     color:white;
+    height: 30px;
 }
-header>div>nav>a{
-    padding: 5px;
+.navbar>nav>a{
+    margin: 5px;
     color:white;
-    text-decoration: none; /* for  take off the highlighting*/
+    text-decoration: none; /* for  take off the highlighting*/ 
 }
+.navbar>nav {
+    min-height: 100%;
+}
+.navbar>nav>a:hover, .navbar>logo>i:hover{
+    color: #d8bd71; /* for change the color of the text*/
+}
+.navbar>img:hover  { /* I don't arrive to make it work*/
+    image-rendering: url(img/h4-logo-img-1.png);
+}
+.navbar>logo>i{
+    color:white;
+}
+.navbar>nav>a, i, .navbar>img {
+    height: 60%;
+    transition-duration: 0.4s;
+    cursor: pointer;/* change when the pointer is on it*/
+    display: flex;
+    align-items: center;
+    
+}
+
+/*-------------------The header---------------------- */
 header {
     background-image: url(img/h5-revolution-img-1.jpg);
+    height: 100%;
 }
-.navbar{
-    width:100%;
-    display:flex;
-    display: row;
+header>img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20; 
+}
+
+/*-------------------The main---------------------- */
+main {
+    width: 100%;
 }
 q{
     background-color:  #c59d5f;
     color:white;
-    margin:20px;
+    padding:10px;
+    display: flex; /* for the citation do a return */
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: bold;
+}
+
+.traditionbeer , .pubstory{
+    text-align: center;
+    width:100%;
+    display: flex;
+}
+.traditionbeer>section>a, .pubstory>section>a{
+    color: white;
+    background-color: #d8bd71;
+    padding: 0.5em;
+    text-decoration: none;
+    border-radius: 10%;
+}
+.traditionbeer>img, .pubstory>img, {
+    width: 50%;
+}
+.traditionbeer>section, .pubstory>section{
+    width:50%;
+}
+.traditionbeer>img{
+    background-image: url(img/h5-el-holder-img-1-1.jpg) ;
+}
+.pubstory>img{
+    background-image: url(img/h5-el-holder-img-2.jpg) ;
+}
+
+.galerie{
+    margin-top: 10px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.galerie>img{
+    width: 25%;
+}
+.serviceicons{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.serviceicon {
+    width:25%;
+    text-align: center;
+    background: none;
+    overflow: hidden;
+}
+.serviceicon>h5:hover{
+    color: #d8bd71; /* for change the color of the text*/
+}
+.serviceicon>img:hover{
+    background: #d8bd71;
+    border-radius: 45%;
+}
+
+.parallaxe{
+    color:white;
+    background-image: url(img/h5-parallax-img-2.jpg);
+    text-align: center;
+}
+
+/*-------------------Footer---------------------- */
+footer{
+    background-color: black;
+    text-align: center;
+    height: 35px;
 }

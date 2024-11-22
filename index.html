@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for have the police Osward-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <!-- to allow the code for display the social media-->
     <script src="https://kit.fontawesome.com/19a031a4c5.js" crossorigin="anonymous"></script> 
     <title>Beergarden </title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="navbar"><!-- this is a navbar-->
+        <img src="img/logo-light.png" alt="logo revolver">
+        <nav > <!--block for links-->
+            <a href="">HOME</a>  <!--buttons-->
+            <a href="">TRADITION</a>
+            <a href="">SERVICES</a>
+            <a href="">MENU</a>
+            <a href="">CONTACT</a>
+        </nav>
+        <logo> <!--Pour afficher les logos twitter, facebook et instagram-->
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </logo>
+    </div>
+
     <header>  
-        <div class="navbar"><!-- this is a navbar-->
-            <img src="img/logo-light.png" alt="logo revolver">
-            <nav > <!--block for links-->
-                <a href="">HOME</a> <br> <!--buttons-->
-                <a href="">TRADITION</a><br>
-                <a href="">SERVICES</a><br>
-                <a href="">MENU</a><br>
-                <a href="">CONTACT</a><br>
-            </nav>
-            <logo> <!--Pour afficher les logos twitter, facebook et instagram-->
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </logo>
-        </div>
-        
         <img src="img/h5-slider-graphic.png" alt="logo de Beergarden">
     </header>
 
@@ -34,22 +38,25 @@
             Love and magic have a great deal in common. They enrich the soul, delight the heart. And they bothe take practice.
         </q> 
 
-        <section> <!-- first section-->
-            <div class="traditionbeer">
+
+        <section class="traditionbeer">
+            <section>
                 <h3>BEER TRADITION</h3>
-                <p>
-                    Edge Themes give you everything you need to create an amazing website. 
-                    Designed and built with care, filled with creative elements and useful options, and completely user-friendly. 
-                    Set up your website quickly and with ease. 
-                    From image galleries to various interactive features you can mix and match all elements.
-                </p>
-                <a href="">READ MORE</a>
-            </div>
-
+            <p>
+                Edge Themes give you everything you need to create an amazing website. 
+                Designed and built with care, filled with creative elements and useful options, and completely user-friendly. 
+                Set up your website quickly and with ease. 
+                From image galleries to various interactive features you can mix and match all elements.
+            </p>
+            <a href="">READ MORE</a>
+            </section>
+            
             <img src="img/h5-holder-image-1.png" alt="tonnneau avec marqué dessus ''best beer''">
+        </section>
+        
+        <section class="pubstory">
             <img src="img/h5-holder-image-2.png" alt="image d'une chope de bière">
-
-            <div class="pubstory">
+            <section>
                 <h3>Pub story</h3>
                 <p>
                     Edge Themes give you everything you need to create an amazing website. 
@@ -58,7 +65,8 @@
                     From image galleries to various interactive features you can mix and match all elements.
                 </p>
                 <a href="">READ MORE</a>
-            </div>
+            </section>
+            
         </section>
 
         <div class="galerie"> <!-- second section-->
@@ -68,7 +76,7 @@
             <img src="img/h5-gallery-img-4-477x477.jpg" alt="personne qui mange ensemble">
         </div>
 
-        <section> <!-- thrid section-->
+        <section class="serviceicons"> <!-- thrid section-->
             <div class="serviceicon">
                 <img src="img/h5-icon-1.png" alt="logo pomme de pin">
                 <h5>SETCH IS THE FIRST</h5>
