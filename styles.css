@@ -13,45 +13,45 @@
     background-color: white;
     font-family: Oswald;
 }
-/*-------------------The navbar---------------------- */
-.navbar {
+/*-------------------The navbar/header---------------------- */
+header {
     background-color: black;
     width:100%;
-    height: 50px;
+    height: 100px;
     padding: 15px;
     display:flex;
     display: row;
     justify-content: space-between;
     align-items: center;
     /* for the navbar don't move*/
-    position: sticky;
+    position: fixed;
     top: 0;
-    opacity: 80%; /* for see under the navbar*/
+    opacity: 60%; /* for see under the navbar*/
 }
-.navbar>nav{
+header>nav{
     display:flex;
     flex-direction: row;
     color:white;
     height: 40%;
 }
-.navbar>nav>a{
+header>nav>a{
     margin: 5px;
     color:white;
     text-decoration: none; /* for  take off the highlighting*/ 
 }
-.navbar>nav {
+header>nav {
     min-height: 100%;
 }
-.navbar>nav>a:hover, .logos>i:hover{
+header>nav>a:hover, .logos>i:hover{
     color: #d8bd71; /* for change the color of the text*/
 }
-.navbar>img:hover  { /* I don't arrive to make it work*/
+header>img:hover  { /* I don't arrive to make it work*/
     image-rendering: url(img/h4-logo-img-1.png);
 }
 .logos>i{
     color:white;
 }
-.navbar>nav>a, i, .navbar>img {
+header>nav>a, i, header>img {
     height: 60%;
     transition-duration: 0.4s;
     cursor: pointer;/* change when the pointer is on it*/
@@ -60,15 +60,18 @@
     
 }
 
-/*-------------------The header---------------------- */
-header {
-    background-image: url(img/h5-revolution-img-1.jpg);
-    background-size: 100% 100%;
-    border: 3px solid red;
+/*-------------------The title---------------------- */
+.title{
+    background-image: url(img/h5-gallery-img-3-477x477.jpg);
     background-repeat: no-repeat;
+    border: 1px black solid;
+    background-size: 100% 100%;
+    height:100dvh; /* make the background color fit on the screen*/
 }
-header>img {
+.title>img {
     margin-left: auto;
+    margin-top: 5em;
+    padding-bottom: 0em;
     margin-right: auto;
     display: flex;
     align-items: center;
@@ -77,6 +80,7 @@ header>img {
 /*-------------------The main---------------------- */
 main {
     width: 100%;
+    border: 5px solid purple;
 }
 q{
     background-color:  #c59d5f;
@@ -150,10 +154,21 @@ q{
     background-image: url(img/h5-parallax-img-2.jpg);
     text-align: center;
 }
+.iframe{
+    background-color: black;
+    background-size: 100% 100%;
+    width:100%;
+    height: 90;
+}
+.iframe>img{
+    width: 100%;
+}
 
 /*-------------------Footer---------------------- */
 footer{
     background-color: black;
     text-align: center;
-    height: 35px;
+    
+    height: 2.5em;
+
 }
