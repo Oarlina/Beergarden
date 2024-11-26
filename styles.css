@@ -28,6 +28,9 @@ header {
     top: 0;
     opacity: 60%; /* for see under the navbar*/
 }
+header>img {
+    max-height: 1em;
+}
 header>nav{
     display:flex;
     flex-direction: row;
@@ -84,14 +87,17 @@ main {
 }
 q{
     background-color:  #c59d5f;
+    quotes: '"' '"' '"' '"';
     color:white;
-    padding:10px;
-    display: flex; /* for the citation do a return */
-    flex-wrap: wrap;
-    text-align: center;
+    height:7em;
+    padding:1.5em;
+    font-size: 2.5em; 
     font-weight: bold;
+    /* for the citation do a return */
+    display: block; 
+    align-content: center;
+    
 }
-
 .traditionbeer , .pubstory{
     text-align: center;
     width:100%;
@@ -119,7 +125,6 @@ q{
 .pubstory>img{
     background-image: url(img/h5-el-holder-img-2.jpg) ;
 }
-
 .galerie{
     margin-top: 10px;
     width:100%;
@@ -148,7 +153,6 @@ q{
 .serviceicon>img:hover{
     filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
 }
-
 .parallaxe{
     color:white;
     background-image: url(img/h5-parallax-img-2.jpg);
