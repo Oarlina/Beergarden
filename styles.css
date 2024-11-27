@@ -13,7 +13,8 @@
     background-color: white;
     font-family: Oswald;
 }
-/*-------------------The navbar/header---------------------- */
+
+/*-----------------------------------The navbar/header-------------------------------------- */
 header {
     background-color: black;
     width:100%;
@@ -63,24 +64,24 @@ header>nav>a, i, header>img {
     
 }
 
-/*-------------------The title---------------------- */
+/*-----------------------------------The title-------------------------------------- */
 .title{
     background-image: url(img/h5-gallery-img-3-477x477.jpg);
     background-repeat: no-repeat;
     border: 1px black solid;
-    background-size: 100% 100%;
+    background-size: cover;
     height:100dvh; /* make the background color fit on the screen*/
 }
 .title>img {
     margin-left: auto;
-    margin-top: 5em;
+    margin-top: 8em;
     padding-bottom: 0em;
     margin-right: auto;
     display: flex;
     align-items: center;
 }
 
-/*-------------------The main---------------------- */
+/*---------------------------------------------------The main------------------------------------------------------ */
 main {
     width: 100%;
     border: 5px solid purple;
@@ -98,10 +99,18 @@ q{
     align-content: center;
     
 }
-.traditionbeer , .pubstory{
+.traditionbeer, .pubstory{
     text-align: center;
-    width:100%;
-    display: flex;
+    display: flex;  
+    align-items: center; /* for center the text of the link part*/
+    font-size: x-large; /* for grow the text*/
+}
+.traditionbeer>p , .pubstory>p{
+    font-family: 'Raleway'; 
+}
+.traditionbeer>h5 , .pubstory>h5{
+    font-family: 'Times New Roman', Times, serif; /* for change the police of the subtitle*/
+    font-style: italic;
 }
 .traditionbeer>section>a, .pubstory>section>a{
     color: white;
@@ -109,6 +118,8 @@ q{
     padding: 0.5em;
     text-decoration: none;
     border-radius: 10%;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 .traditionbeer>section>a:hover, .pubstory>section>a:hover{
     background-color: #ac8c5c;
@@ -118,31 +129,73 @@ q{
 }
 .traditionbeer>section, .pubstory>section{
     width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
 }
 .traditionbeer>img{
-    background-image: url(img/h5-el-holder-img-1-1.jpg) ;
+    background-image: url(img/h5-el-holder-img-1-1.jpg);
+    width: 100svh;
+    height: 100dvh;
 }
 .pubstory>img{
-    background-image: url(img/h5-el-holder-img-2.jpg) ;
+    background-image: url(img/h5-el-holder-img-2.jpg);
+    height: 100dvh;
 }
+
+
+
+/*-------------------The gallery---------------------- */
 .galerie{
     margin-top: 10px;
     width:100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    background-size: 25% 100%;
 }
-.galerie>img{
+/* .galerie>img{
     width: 25%;
+    transition: transform .7s ease-in-out;
+    z-index: 2;
+} */
+.image{
+    overflow: hidden;
+    background-color: #d8bd71;
+    position: relative;
+    z-index: 1;
+    width: 25%;
+    transition: transform .7s ease-in-out;
 }
+.image :hover {
+    scale:1.2;
+    position: relative;
+    z-index: 2; /* pour ramener le background en avant*/
+    opacity: 50%;
+    transform: rotate(90deg);
+}
+.croix{
+    position: relative;
+    z-index: 4;
+    opacity: 0%;
+}
+.croix:hover{
+    opacity: 100%;
+    position: relative;
+    z-index: 4;
+}
+/*-------------------The services---------------------- */
 .serviceicons{
-    margin-top: 10px;
+    padding: 4em;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: nowrap;
+    height: 40vh;
 }
 .serviceicon {
-    width:25%;
+    width:15%;
     text-align: center;
     background: none;
     overflow: hidden;
@@ -153,11 +206,23 @@ q{
 .serviceicon>img:hover{
     filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
 }
+
+
+
+/*-------------------The parralaxe---------------------- */
 .parallaxe{
     color:white;
     background-image: url(img/h5-parallax-img-2.jpg);
     text-align: center;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
 }
+
+
+/*-------------------The frame---------------------- */
 .iframe{
     background-color: black;
     background-size: 100% 100%;
@@ -168,7 +233,7 @@ q{
     width: 100%;
 }
 
-/*-------------------Footer---------------------- */
+/*---------------------------------------------------Footer------------------------------------------------------ */
 footer{
     background-color: black;
     text-align: center;
