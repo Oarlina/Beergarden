@@ -160,7 +160,6 @@ q{
     position: relative;
     z-index: 1;
     width: 25%;
-    transition: transform .7s ease-in-out;
     /* background-image: url(img/croix.png); */
     background-size: 30% 30%;
     background-position: center;
@@ -169,17 +168,29 @@ q{
 .image :hover {
     scale:1.2;
     position: relative;
-    z-index: 2; /* pour ramener le background en avant*/
+
+    z-index: 2; /* for move forward the background*/
     opacity: 50%;
 }
-i{
-    color: green;
+.image>i{
     position: absolute;
-    z-index: 4;
-    width:3em;
-    height: 5em;
-
+    top: 45%; /* for put the icon on the center of the image*/
+    left: 45%;
+    font-size: xxx-large;
+    z-index: 0;
+    color:green;
+    /* opacity: 0; */
+    
 }
+.image:hover i{ /* for change the display of the i when I go hover the image */
+    /* transition-duration: 1.5s, 1.5s;the time of transition when I pass hover and stop */
+    transform: rotateZ(90deg);
+    top: 20%;
+    left: 20%;
+    opacity: 100%;
+    color: blue;
+}
+
 /*-------------------The services---------------------- */
 .serviceicons{
     padding: 4em;
@@ -195,6 +206,9 @@ i{
     background: none;
     overflow: hidden;
 }
+.serviceicon>h5{
+    margin-top: 1em;
+}
 .serviceicon>h5:hover{
     color: #d8bd71; /* for change the color of the text*/
 }
@@ -208,14 +222,18 @@ i{
 .parallaxe{
     color:white;
     background-image: url(img/h5-parallax-img-2.jpg);
-    text-align: center;
+    background-attachment: fixed;/*for the background don't move when I move the page*/
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 40vh;
     display: flex;
     flex-direction: column;
-    align-content: center;
-
+    align-items: center; /* for center the text horizontally*/
+    justify-content: center; /* for center the text vertically*/
 }
-
+.parallaxe>h2{
+    font-size: xxx-large;
+}
 
 /*-------------------The frame---------------------- */
 .iframe{
