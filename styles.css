@@ -29,32 +29,36 @@ header {
     top: 0;
     opacity: 60%; /* for see under the navbar*/
 }
+header>nav{
+    display: flex;
+    flex-direction: row;
+}
 header>img {
     max-height: 1em;
 }
-header>nav{
+.main_pages{
     display:flex;
     flex-direction: row;
-    color:white;
+    color:#E4E821;
     height: 40%;
 }
-header>nav>a{
+.main_pages>a{
     margin: 5px;
-    color:white;
+    color:#E4E821;
     text-decoration: none; /* for  take off the highlighting*/ 
 }
-header>nav {
+.main_pages{
     min-height: 100%;
     align-items: center;
 
 }
-header>nav>a:hover, .logos>i:hover{
+header>nav>a:hover, #logos>i:hover{
     color: #d8bd71; /* for change the color of the text*/
 }
 header>img:hover  { /* I don't arrive to make it work*/
     image-rendering: url(img/h4-logo-img-1.png);
 }
-.logos>i{
+#logos>i{
     color:white;
 }
 header>nav>a, i, header>img {
@@ -67,7 +71,7 @@ header>nav>a, i, header>img {
 }
 
 /*-----------------------------------The title-------------------------------------- */
-.title{
+#title{
     background-image: url(img/h5-gallery-img-3-477x477.jpg);
     background-repeat: no-repeat;
     border: 1px black solid;
@@ -98,20 +102,20 @@ q{
     align-content: center;
     
 }
-.traditionbeer, .pubstory{
+#traditionbeer, #pubstory{
     text-align: center;
     display: flex;  
     align-items: center; /* for center the text of the link part*/
     font-size: x-large; /* for grow the text*/
 }
-.traditionbeer>p , .pubstory>p{
+#traditionbeer>p , #pubstory>p{
     font-family: 'Raleway'; 
 }
-.traditionbeer>h5 , .pubstory>h5{
+#traditionbeer>h5 , #pubstory>h5{
     font-family: 'Times New Roman', Times, serif; /* for change the police of the subtitle*/
     font-style: italic;
 }
-.traditionbeer>section>a, .pubstory>section>a{
+#traditionbeer>section>a, #pubstory>section>a{
     color: white;
     background-color: #d8bd71;
     padding: 0.5em;
@@ -120,25 +124,25 @@ q{
     padding-left: 2em;
     padding-right: 2em;
 }
-.traditionbeer>section>a:hover, .pubstory>section>a:hover{
+#traditionbeer>section>a:hover, #pubstory>section>a:hover{
     background-color: #ac8c5c;
 }
-.traditionbeer>img, .pubstory>img, {
+#traditionbeer>img, #pubstory>img, {
     width: 50vh;
 }
-.traditionbeer>section, .pubstory>section{
+#traditionbeer>section, #pubstory>section{
     width:50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3em;
 }
-.traditionbeer>img{
+#traditionbeer>img{
     background-image: url(img/h5-el-holder-img-1-1.jpg);
     width: 100svh;
     height: 100dvh;
 }
-.pubstory>img{
+#pubstory>img{
     background-image: url(img/h5-el-holder-img-2.jpg);
     height: 100dvh;
 }
@@ -146,7 +150,7 @@ q{
 
 
 /*-------------------The gallery---------------------- */
-.galerie{
+#galerie{
     width:100%;
     display: flex;
     flex-direction: row;
@@ -191,7 +195,7 @@ q{
 }
 
 /*-------------------The services---------------------- */
-.serviceicons{
+#serviceicons{
     padding: 4em;
     display: flex;
     flex-direction: row;
@@ -218,7 +222,7 @@ q{
 
 
 /*-------------------The parralaxe---------------------- */
-.parallaxe{
+#parallaxe{
     color:white;
     background-image: url(img/h5-parallax-img-2.jpg);
     background-attachment: fixed;/*for the background don't move when I move the page*/
@@ -230,28 +234,26 @@ q{
     align-items: center; /* for center the text horizontally*/
     justify-content: center; /* for center the text vertically*/
 }
-.parallaxe>h2{
+#parallaxe>h2{
     font-size: xxx-large;
 }
 
 /*-------------------The frame---------------------- */
-.iframe{
+#iframe{
     background-color: black;
     background-size: 100% 100%;
     width:100%;
     height: 90;
 }
-.iframe>img{
+#iframe>img{
     width: 100%;
 }
 
 /*---------------------------------------------------Footer------------------------------------------------------ */
 footer{
     background-color: black;
-    text-align: center;
-    
+    text-align: center;  
     height: 2.5em;
-
 }
 
 
@@ -260,48 +262,200 @@ footer{
 
 @media screen and (max-width: 768px) { /* for the mobile et the little device*/
 
-    /*-------------------The header/navbar---------------------- */
-    header>nav, header>img, .logos{
+    /* -------------------The header/navbar----------------------
+    header{
+        width:100%;
+        justify-content: space-around;
+        opacity: 80%;
+    }
+    header>nav, header>img, #logos{
         font-size: x-large;
     }
+    /* header>nav>label{margin-top: 2em;} 
+    header>nav{
+        align-items: flex-start;
+    }
+    nav .main_pages, label, #toggle{
+        display: none;
+    }
+    .main_pages{
+        flex-direction: column;
+        margin-top: 10em;
+    }
+    label {
+        color:#E4E821;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    #toggle:checked + .main_pages {
+        display: flex;
+        align-items: center;
+        
+    } */
+
+    /* Style the navigation menu */
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+        
+        margin-top: 10em;
+      }
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+    /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        flex-direction: row;
+        height: auto;
+        width: 5em;
+    }
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    /* Style the active link (or home/logo) */
+    .active {
+        margin-top: 10em;
+        background-color: #d8bd71;
+        color: white;
+    }
+
     /*-------------------The title---------------------- */
-    .title{
+    #title{
         background-size: 100% 100%;
-        min-width: 100%;
+        max-width: 100%;
         margin: 0;
+    }
+    #title>img{
+        max-width: 100%;
     }
     /*-------------------The quote---------------------- */
     q{
         padding: 3%;
     }
     /*-------------------Beer tradition and pubstory---------------------- */
-    .traditionbeer, .pubstory{
+    #traditionbeer, #pubstory{
         flex-direction: column;
-        font-size: xx-large;
+        font-size: x-large;
     }
-    .traditionbeer>section, .pubstory>section{
+    #traditionbeer>section, #pubstory>section{
         width: 100%;
     }
+    #traditionbeer>section>h3, #pubstory>section>h3{
+        font-size: xxx-large;
+    }
+    #traditionbeer>section>p, #pubstory>section>p{
+        margin-bottom: 1em;
+    }
+    #traditionbeer>img, #pubstory>img{
+        width:100%;
+    }
     /*-------------------The gallery---------------------- */
-    .galerie{
+    #galerie{
         flex-wrap: wrap;
     }
     .image{
         width:50%;
         flex-wrap: wrap;
     }
-    
-    
     /*-------------------The icons service---------------------- */
+    #serviceicons{
+        margin: auto;
+        height: 50%;
+        text-align: justify;
+    }
+    .serviceicon{
+        width:25%;
+        padding: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
     .serviceicon>h5:focus{
         color: #d8bd71; /* for change the color of the text*/
     }
     .serviceicon>img:focus{
         filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
     }
-    /*-------------------The parralaxe---------------------- */
 
-    /*-------------------The iframe---------------------- */
+}
 
-    /*-------------------The footer---------------------- */
+@media screen and (min-width: 769px) and (max-width:1024px) { /* for the tablets*/
+
+    /*-------------------The title---------------------- */
+    #title{
+        background-size: 100% 100%;
+        min-width: 100%;
+        margin: 0;
+    }
+    /* #title>img{
+        max-width: 100%;
+    } */
+    /*-------------------The quote---------------------- */
+    q{
+        padding: 3%;
+    }
+    /*-------------------Beer tradition and pubstory---------------------- */
+
+    #traditionbeer>section, #pubstory>section{
+        width: 50%;
+    }
+    #traditionbeer>section>h3, #pubstory>section>h3{
+        font-size: xxx-large;
+    }
+    #traditionbeer>section>p, #pubstory>section>p{
+        margin-bottom: 1em;
+    }
+    #traditionbeer>img, #pubstory>img{
+        width: 50%;
+    }
+    -------------------The gallery----------------------
+
+    .image{
+        width:50%;
+        flex-wrap: wrap;
+    }
+    /*-------------------The icons service---------------------- */
+    #serviceicons{
+        margin: auto;
+        height: 50%;
+    }
+    .serviceicon{
+        width:25%;
+        padding: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .serviceicon>img{
+        width:8em;
+        margin: auto;
+    }
+    .serviceicon>h5:focus{
+        color: #d8bd71; /* for change the color of the text*/
+    }
+    .serviceicon>img:focus{
+        filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
+    }
 }
