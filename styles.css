@@ -45,6 +45,8 @@ header>nav>a{
 }
 header>nav {
     min-height: 100%;
+    align-items: center;
+
 }
 header>nav>a:hover, .logos>i:hover{
     color: #d8bd71; /* for change the color of the text*/
@@ -69,22 +71,19 @@ header>nav>a, i, header>img {
     background-image: url(img/h5-gallery-img-3-477x477.jpg);
     background-repeat: no-repeat;
     border: 1px black solid;
-    background-size: cover;
+    background-position: center; /* for have the image that "zoom" in the center*/
+    background-size: cover; /* for the image fit completely in the contain*/
     height:100dvh; /* make the background color fit on the screen*/
-}
-.title>img {
-    margin-left: auto;
-    margin-top: 8em;
-    padding-bottom: 0em;
-    margin-right: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
+
 
 /*---------------------------------------------------The main------------------------------------------------------ */
 main {
     width: 100%;
-    border: 5px solid purple;
 }
 q{
     background-color:  #c59d5f;
@@ -125,7 +124,7 @@ q{
     background-color: #ac8c5c;
 }
 .traditionbeer>img, .pubstory>img, {
-    width: 50%;
+    width: 50vh;
 }
 .traditionbeer>section, .pubstory>section{
     width:50%;
@@ -253,4 +252,56 @@ footer{
     
     height: 2.5em;
 
+}
+
+
+
+/*---------------------------------------------------responsive design------------------------------------------------------ */
+
+@media screen and (max-width: 768px) { /* for the mobile et the little device*/
+
+    /*-------------------The header/navbar---------------------- */
+    header>nav, header>img, .logos{
+        font-size: x-large;
+    }
+    /*-------------------The title---------------------- */
+    .title{
+        background-size: 100% 100%;
+        min-width: 100%;
+        margin: 0;
+    }
+    /*-------------------The quote---------------------- */
+    q{
+        padding: 3%;
+    }
+    /*-------------------Beer tradition and pubstory---------------------- */
+    .traditionbeer, .pubstory{
+        flex-direction: column;
+        font-size: xx-large;
+    }
+    .traditionbeer>section, .pubstory>section{
+        width: 100%;
+    }
+    /*-------------------The gallery---------------------- */
+    .galerie{
+        flex-wrap: wrap;
+    }
+    .image{
+        width:50%;
+        flex-wrap: wrap;
+    }
+    
+    
+    /*-------------------The icons service---------------------- */
+    .serviceicon>h5:focus{
+        color: #d8bd71; /* for change the color of the text*/
+    }
+    .serviceicon>img:focus{
+        filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
+    }
+    /*-------------------The parralaxe---------------------- */
+
+    /*-------------------The iframe---------------------- */
+
+    /*-------------------The footer---------------------- */
 }
