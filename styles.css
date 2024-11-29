@@ -3,17 +3,10 @@
     padding:0;
     box-sizing: border-box;
     }
-    .oswald-<uniquifier> {
-        font-family: "Oswald", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-      }
-:root {
-    background-color: white;
+    
+body {
     font-family: Oswald;
 }
-
 /*-----------------------------------The navbar/header-------------------------------------- */
 header {
     background-color: black;
@@ -38,7 +31,7 @@ header>img {
     color:white;
     text-decoration: none;
     margin: 5px;
-
+}
 .topnav>a{
     visibility: hidden;
 }
@@ -63,7 +56,7 @@ header>img {
     border: 1px black solid;
     background-position: center; /* for have the image that "zoom" in the center*/
     background-size: cover; /* for the image fit completely in the contain*/
-    height:100dvh; /* make the background color fit on the screen*/
+    height:100%; /* make the background color fit on the screen*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,8 +106,8 @@ q{
 #traditionbeer>section>a:hover, #pubstory>section>a:hover{
     background-color: #ac8c5c;
 }
-#traditionbeer>img, #pubstory>img, {
-    width: 50vh;
+#traditionbeer>img, #pubstory>img{
+    width: 50%;
 }
 #traditionbeer>section, #pubstory>section{
     width:50%;
@@ -346,9 +339,8 @@ footer{
 
 }
 
-@media screen and (min-width: 769px) and (max-width:1024px) { /* for the tablets*/
-
-    /*-------------------The nav bar---------------------- */
+@media screen and (min-width: 769px) and (max-width:1024px)  /* for the tablets*/
+{/*-------------------The nav bar---------------------- */
         /* Style the navigation menu */
         .topnav {
             overflow: hidden;
@@ -389,9 +381,6 @@ footer{
         min-width: 100%;
         margin: 0;
     }
-    /* #title>img{
-        max-width: 100%;
-    } */
     /*-------------------The quote---------------------- */
     q{
         padding: 3%;
@@ -440,3 +429,7 @@ footer{
         filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
     }
 }
+
+
+
+
