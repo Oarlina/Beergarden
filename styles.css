@@ -142,7 +142,6 @@ q{
     position: relative;
     z-index: 1;
     width: 25%;
-    /* background-image: url(img/croix.png); */
     background-size: 30% 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,13 +159,13 @@ q{
     left: 45%;
     font-size: xxx-large;
     z-index: 0;
-    color:green;
-    /* opacity: 0; */
+    /* color:green; */
+    opacity: 0;
     
 }
 .image:hover i{ /* for change the display of the i when I go hover the image */
-    /* transition-duration: 1.5s, 1.5s;the time of transition when I pass hover and stop */
-    transform: rotateZ(90deg);
+    transition-duration: 1.5s, 1.5s;/*the time of transition when I pass hover and stop */
+    transform: rotate(90deg);
     top: 20%;
     left: 20%;
     opacity: 100%;
@@ -241,7 +240,7 @@ footer{
 
 @media screen and (max-width: 768px) { /* for the mobile et the little device*/
 
-    /* -------------------The nav bar----------------------
+    /* -------------------The nav bar----------------------*/
 
         /* Style the navigation menu */
         .topnav {
@@ -289,6 +288,7 @@ footer{
     /*-------------------The quote---------------------- */
     q{
         padding: 3%;
+        height: fit-content;
     }
     /*-------------------Beer tradition and pubstory---------------------- */
     #traditionbeer, #pubstory{
@@ -297,6 +297,7 @@ footer{
     }
     #traditionbeer>section, #pubstory>section{
         width: 100%;
+        padding: 1em;
     }
     #traditionbeer>section>h3, #pubstory>section>h3{
         font-size: xxx-large;
@@ -313,28 +314,49 @@ footer{
         flex-wrap: wrap;
     }
     .image{
-        width:50%;
+        width:100%;
         flex-wrap: wrap;
     }
     /*-------------------The icons service---------------------- */
     #serviceicons{
         margin: auto;
-        height: 50%;
+        padding: 1em;
+        height: 75%;
         text-align: justify;
+        flex-wrap: wrap;
     }
     .serviceicon{
-        width:25%;
+        width:50%;
         padding: none;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+        margin-bottom: 1em;
     }
     .serviceicon>h5:focus{
         color: #d8bd71; /* for change the color of the text*/
     }
+    .serviceicon>img{
+        width: 75%;
+        margin: auto;
+    }
     .serviceicon>img:focus{
         filter: drop-shadow(8px 8px 10px #d8bd71);/* for make a shadow on the icon*/
+    }
+    /*-------------------The parallaxe---------------------- */
+    #parallaxe{
+        padding:1em;
+        text-align: center;
+    }
+    /*-------------------The iframe---------------------- */
+    #iframe{
+        overflow: hidden;
+    }
+    #iframe>img{
+        height: 25em;
+        display: inline-block; /* change the default display type to inline-block */
+        scale: 3;
+        
     }
 
 }
