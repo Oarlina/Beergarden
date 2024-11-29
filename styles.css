@@ -56,7 +56,7 @@ header>img {
     border: 1px black solid;
     background-position: center; /* for have the image that "zoom" in the center*/
     background-size: cover; /* for the image fit completely in the contain*/
-    height:100%; /* make the background color fit on the screen*/
+    height:100vh; /* make the background color fit on the screen*/
     display: flex;
     align-items: center;
     justify-content: center;
