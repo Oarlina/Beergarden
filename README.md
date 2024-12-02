@@ -18,8 +18,10 @@ Cet exercice a été réalisé dans le cadre d'une formation en développement w
 * Implémentation d’un effet de parallaxe pour améliorer l’esthétique et l'expérience utilisateur.
 * Découverte et utilisation des pseudo-classes CSS :hover et :focus.
 * Ajout d’un menu burger pour les versions mobile et tablette.
+* ajout du dark mode.
   
 **Objectifs Pédagogiques**
 * Découverte de l'interactivité.
 * Améliorer la connaissance sur le responsive design.
 * Ajout d’un menu burger pour les versions mobile et tablette.
+* Ajout du dark mode.
