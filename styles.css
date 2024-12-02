@@ -61,6 +61,16 @@ header, #title, #serviceicons, #parallaxe{
         cursor: pointer;/* change when the pointer is on it*/
         display: flex; /* pour pouvoir modifier les éléments du header*/
     }
+    .toggle{
+        text-decoration: none;
+        height: fit-content;
+        width: fit-content;
+        color: white;
+    } /* permet à la légende(=label) de s'afficher en blanc*/
+      body:has(#darkmode-toggle:checked) {
+        background-color: #000000;
+        color: #d0d0d0;
+      } /* permet au body de changer de couleur*/
 /*-----------------------------------The title-------------------------------------- */
     #title{
         background-image: url(img/h5-gallery-img-3-477x477.jpg); /* mettre une image en fond*/
