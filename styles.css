@@ -29,12 +29,15 @@ header, #title, #serviceicons, #parallaxe{
     font-family: Oswald; /* pour mettre toute la page en police Oswald*/
     --couleur-biere: #ac8c5c; /* propriete personalisé pour avoir la couleur*/
 }
+.topnav, i,header,  header>img, #galerie, #title,#traditionbeer, #pubstory, #traditionbeer>section, #pubstory>section, #serviceicons, #parallaxe{
+    display: flex;
+}
+
 /*-----------------------------------The navbar/header-------------------------------------- */
     header {
         background-color: black; /* pour mettre un fond noir à la barre de naviguation*/
         height: 100px; /* pour mettre la hauteur à 100 pixels*/
         padding: 15px; /* pour mettre un remplissage de 15 pixels*/
-        display:flex; /* pour pouvoir modifier les éléments du header*/
         display: row; /* pour avoir les éléments aligner de la gauche vers la droite*/
         justify-content: space-between; /* pour que les espaces se font en parralele de chaque côté*/
         position: fixed; /* pour pouvoir voir le header même si on fait défiler la page*/
@@ -59,7 +62,6 @@ header, #title, #serviceicons, #parallaxe{
         height: 60%; /* pour mettre la hauteur à 60% du header*/
         transition-duration: 0.4s;
         cursor: pointer;/* change when the pointer is on it*/
-        display: flex; /* pour pouvoir modifier les éléments du header*/
     }
     .toggle{
         text-decoration: none;
@@ -79,11 +81,10 @@ header, #title, #serviceicons, #parallaxe{
         background-position: center; /* for have the image that "zoom" in the center*/
         background-size: cover; /* for the image fit completely in the contain*/
         height:100vh; /* make the background color fit on the screen*/
-        display: flex; /* pour pouvoir modifier les éléments du header*/
     }
 /*---------------------------------------------------The main------------------------------------------------------ */
     q{
-        background-color:  #c59d5f; /* pour mettre un fond de couleur*/
+        background-color:  var(--couleur-biere); /* pour mettre un fond de couleur*/
         quotes: '"' '"' '"' '"'; /* pour que la citation prenne "" comme guillemets*/
         color:white; /* pour mettre la couleur du texte en blanc*/
         height:7em; /* pour mettre la hauteur à 7 en police de caractère*/
@@ -95,7 +96,6 @@ header, #title, #serviceicons, #parallaxe{
         
     }
     #traditionbeer, #pubstory{
-        display: flex; /* pour pouvoir modifier les éléments du header*/
         font-size: x-large; /* for grow the text*/
     }
     #traditionbeer>p , #pubstory>p{
@@ -118,7 +118,6 @@ header, #title, #serviceicons, #parallaxe{
         background-color: var(--couleur-biere); /* pour mettre un fond de couleur*/
     }
     #traditionbeer>section, #pubstory>section{
-        display: flex; /* pour pouvoir modifier les éléments du header*/
         flex-direction: column; /* pour que les élements soit disposé en colonne du haut vers le bas*/
         padding: 3em; /* pour mettre un remplissage à 3 en police de caractère*/
     }
@@ -132,7 +131,6 @@ header, #title, #serviceicons, #parallaxe{
     }
 /*-------------------The gallery---------------------- */
     #galerie{
-        display: flex; /* pour pouvoir modifier les éléments du header*/
         flex-direction: row; /* pour que les éléments s'affiche de la gauche vers la droite*/
         flex-wrap: nowrap; /* pour que les éléments ne font pas de reoutr à la ligne*/
         background-size: 25% 100%; /* pour que le fond prend 25% sur la largeur et 100% sur la hauteur*/
@@ -174,7 +172,6 @@ header, #title, #serviceicons, #parallaxe{
 /*-------------------The services---------------------- */
     #serviceicons{
     padding: 4em; /* pour mettre un remplissage )à 4 en police de caractère*/
-    display: flex; /* pour pouvoir modifier les éléments du header*/
     flex-direction: row; /* pour afficher les éléments de la gauche vers la droite*/
     flex-wrap: nowrap; /* pour que les éléments ne retourne pas à la ligne*/
     height: 40vh; /* pour mettre la hauteur à 40% de l'écran*/
@@ -201,7 +198,6 @@ header, #title, #serviceicons, #parallaxe{
         background-repeat: no-repeat;
         background-size: cover;
         height: 40vh; /* pour mettre la hauteur à 40% de l'écran*/
-        display: flex; /* pour pouvoir modifier les éléments du header*/
         flex-direction: column;
     }
     #parallaxe>h2{
@@ -216,10 +212,8 @@ header, #title, #serviceicons, #parallaxe{
 /*---------------------------------------------------Footer------------------------------------------------------ */
     footer{
         background-color: black;
-
         height: 2.5em; /* pour mettre la hauteur à 2.5 taille de police de caractère*/
     }
-
 
 
 /*---------------------------------------------------responsive design------------------------------------------------------ */
